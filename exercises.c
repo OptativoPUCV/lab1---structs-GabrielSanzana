@@ -64,8 +64,7 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-  Vector *local = NULL;
-  local = (Vector *) calloc(local,sizeof(Vector));
+
    return NULL;
 }
 
