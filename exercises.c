@@ -13,7 +13,9 @@ Programe la función void swap(int *a, int *b), la cual
 intercambia los valores de las variables apuntadas por a y b.
 */
 void swap(int *a, int *b) {
-
+  int aux=*a;
+  *a=*b;
+  *b=aux;
 }
 
 /*
@@ -63,6 +65,8 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
+  Vector *local = NULL;
+  local = (Vector *) calloc(local,sizeof(Vector));
    return NULL;
 }
 

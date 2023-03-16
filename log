@@ -1,0 +1,17 @@
+Thu 16 Mar 2023 11:12:18 PM UTC: 
+ exercises.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:69:29: error: passing argument 1 of ‘calloc’ makes integer from pointer without a cast [-Werror=int-conversion]
+   69 |   local = (Vector *) calloc(local,sizeof(Vector));
+      |                             ^~~~~
+      |                             |
+      |                             Vector *
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:543:29: note: expected ‘size_t’ {aka ‘long unsigned int’} but argument is of type ‘Vector *’
+  543 | extern void *calloc (size_t __nmemb, size_t __size)
+      |                      ~~~~~~~^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c602089
