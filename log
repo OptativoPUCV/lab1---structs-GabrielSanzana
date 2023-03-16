@@ -15,3 +15,30 @@ In file included from test.c:2:
 cc1: all warnings being treated as errors
 Compilation failed
 c602089
+Thu 16 Mar 2023 11:12:42 PM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:50:11: error: ‘p’ undeclared (first use in this function)
+   50 |    return p;
+      |           ^
+exercises.c:50:11: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: In function ‘crearVector’:
+exercises.c:68:29: error: passing argument 1 of ‘calloc’ makes integer from pointer without a cast [-Werror=int-conversion]
+   68 |   local = (Vector *) calloc(local,sizeof(Vector));
+      |                             ^~~~~
+      |                             |
+      |                             Vector *
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:543:29: note: expected ‘size_t’ {aka ‘long unsigned int’} but argument is of type ‘Vector *’
+  543 | extern void *calloc (size_t __nmemb, size_t __size)
+      |                      ~~~~~~~^~~~~~~
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:51:1: error: control reaches end of non-void function [-Werror=return-type]
+   51 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0884298
