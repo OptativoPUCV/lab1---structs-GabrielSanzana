@@ -86,8 +86,7 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
- if(i<v->capacidad && i>=0)
-   v->datos[i]=valor;
+   v[i].datos[i]=valor;
 }
 
 /*
@@ -114,5 +113,5 @@ Use las operaciones implementadas de vectores para
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
 void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
-
+ 
 }
